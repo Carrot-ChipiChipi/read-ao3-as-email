@@ -17,10 +17,6 @@
 | 阅读区 | 小说正文（含作者笔记、后记、上下章导航） |
 | 用户头像 | 跳转 AO3 登录页 |
 
-界面目标参考（真实 Outlook Web）：
-
-![Outlook 参考](screenshots/reference-outlook.png)
-
 ---
 
 ## 安装方法
