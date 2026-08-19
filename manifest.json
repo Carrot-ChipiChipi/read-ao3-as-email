@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Marcohard Ourlock",
   "description": "Marcohard Ourlock - Email Client",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "content_scripts": [
     {
       "matches": ["https://archiveofourown.org/users/login"],
