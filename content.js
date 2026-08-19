@@ -679,15 +679,29 @@
       });
     });
 
-    // Tabs
+    // Tabs: 重点=最新更新 / 其他=按热度
+    const TAB_URLS = {
+      focused: '/works/search?work_search%5Bsort_column%5D=revised_at&work_search%5Bsort_direction%5D=desc',
+      other: '/works/search?work_search%5Bsort_column%5D=hits&work_search%5Bsort_direction%5D=desc'
+    };
+    // 初始化：按当前 URL 的 sort_column 高亮对应 tab
+    const curSort = new URLSearchParams(location.search).get('work_search[sort_column]');
+    if (curSort === 'hits') {
+      els.tabs.forEach(t => t.classList.remove('active'));
+      const otherTab = els.tabs.find(t => t.dataset.tab === 'other');
+      if (otherTab) otherTab.classList.add('active');
+    }
     els.tabs.forEach(tab => {
       tab.addEventListener('click', () => {
+        const target = TAB_URLS[tab.dataset.tab];
+        if (!target) return;
         els.tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        if (tab.dataset.tab === 'other') {
-          location.href = '/works/search?work_search%5Bsort_column%5D=hits&work_search%5Bsort_direction%5D=desc';
+        // 目标 URL 与当前一致时浏览器不会自动刷新，强制 reload
+        if (new URL(target, location.href).href === location.href) {
+          location.reload();
         } else {
-          location.href = '/works/search?work_search%5Bsort_column%5D=revised_at&work_search%5Bsort_direction%5D=desc';
+          location.href = target;
         }
       });
     });

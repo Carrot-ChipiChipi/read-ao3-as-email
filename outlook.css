@@ -45,7 +45,7 @@ html:has(> #outlook-app) {
 #outlook-app .title-bar {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 48px;
   flex-shrink: 0;
   background: #fafafa;
   border-bottom: 1px solid var(--border);
@@ -75,13 +75,13 @@ html:has(> #outlook-app) {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 240px;
+  width: 420px;
+  max-width: 100%;
   background: #fff;
   border: 1px solid #c8c8c8;
   border-radius: 3px;
-  padding: 0 8px;
-  height: 26px;
+  padding: 0 11px;
+  height: 40px;
   transition: border-color 0.12s;
 }
 
@@ -100,11 +100,11 @@ html:has(> #outlook-app) {
   border: none !important;
   background: transparent !important;
   color: var(--text) !important;
-  font-size: 12px !important;
-  padding: 0 6px !important;
+  font-size: 13px !important;
+  padding: 0 8px !important;
   outline: none !important;
   box-shadow: none !important;
-  height: 24px;
+  height: 38px;
 }
 
 #outlook-app #search-input::placeholder {
@@ -148,7 +148,7 @@ html:has(> #outlook-app) {
 
 /* ===== 侧边栏 200px ===== */
 #outlook-app .sidebar {
-  width: 200px;
+  width: 264px;
   flex-shrink: 0;
   background: var(--bg-app);
   border-right: 1px solid var(--border);
@@ -192,13 +192,13 @@ html:has(> #outlook-app) {
 #outlook-app .folder-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  height: 28px;
-  padding: 0 8px;
+  gap: 10px;
+  height: 44px;
+  padding: 0 13px;
   border-radius: 3px;
   cursor: pointer;
   color: var(--text-dim);
-  font-size: 12px;
+  font-size: 13px;
   transition: background 0.1s;
   text-decoration: none !important;
   width: 100%;
@@ -307,7 +307,7 @@ html:has(> #outlook-app) {
 
 /* ===== 邮件列表面板 ===== */
 #outlook-app .email-list-panel {
-  width: 336px;
+  width: 400px;
   flex-shrink: 0;
   border-right: 1px solid var(--border);
   display: flex;
@@ -408,7 +408,7 @@ html:has(> #outlook-app) {
 /* ===== 邮件条目 紧凑 ===== */
 #outlook-app .email-item {
   display: flex;
-  padding: 8px 14px; min-height: 120px;
+  padding: 10px 14px; min-height: 96px;
   border-bottom: 1px solid #eeeeee;
   cursor: pointer;
   transition: background 0.08s;
@@ -420,7 +420,7 @@ html:has(> #outlook-app) {
   border-top: none;
   text-align: left;
   font-family: inherit;
-  align-items: flex-start;
+  align-items: stretch;
   line-height: 1.4;
 }
 
@@ -453,6 +453,7 @@ html:has(> #outlook-app) {
   font-weight: 600;
   color: #fff;
   flex-shrink: 0;
+  align-self: center;
   margin-top: 0;
 }
 
@@ -829,7 +830,12 @@ html:has(> #outlook-app) {
 }
 
 /* ===== 响应式 ===== */
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
+  #outlook-app .sidebar { width: 210px; }
+  #outlook-app .email-list-panel { width: 320px; }
+}
+
+@media (max-width: 1100px) {
   #outlook-app .sidebar { width: 160px; }
   #outlook-app .email-list-panel { width: 260px; }
 }
