@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Microsoft Outlook",
+  "description": "Microsoft Outlook - Email Client",
+  "version": "2.1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://archiveofourown.org/users/login"],
+      "js": ["login.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://archiveofourown.org/*"],
+      "css": ["outlook.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["bg.jpg"],
+      "matches": ["https://archiveofourown.org/*"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
