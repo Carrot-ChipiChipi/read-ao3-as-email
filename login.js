@@ -1,4 +1,4 @@
-// login.js - Outlook disguise for AO3 login page
+// login.js - Marcohard Ourlock disguise for AO3 login page
 (function () {
   'use strict';
 
@@ -20,7 +20,7 @@
           display: flex;
           flex-direction: column;
           background: #f3f2f1;
-          font-family: 'Segoe UI', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+          font-family: 'Segoe UI', 'Noto Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
           color: #323130;
         }
         #outlook-login .login-header {

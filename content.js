@@ -1,4 +1,4 @@
-// content.js - AO3 → Outlook disguise (content script, runs on archiveofourown.org)
+// content.js - AO3 → Marcohard Ourlock disguise (content script, runs on archiveofourown.org)
 (function () {
   'use strict';
 

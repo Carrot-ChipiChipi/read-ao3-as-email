@@ -1,4 +1,4 @@
-# Outlook Reader - Edge 扩展加载器
+# Ourlock Reader - Edge 扩展加载器
 # 双击运行即可打开带扩展的 Edge
 
 $ErrorActionPreference = "SilentlyContinue"
@@ -23,7 +23,7 @@ if ($devMode -and $devMode.DeveloperToolsAvailability -eq 2) {
 }
 
 # 启动 Edge 并加载扩展
-Write-Host "正在启动 Edge + Outlook Reader 扩展..." -ForegroundColor Cyan
+Write-Host "正在启动 Edge + Ourlock Reader 扩展..." -ForegroundColor Cyan
 
 $edgePath = Get-Command "msedge.exe" -ErrorAction SilentlyContinue
 if (-not $edgePath) {
@@ -38,7 +38,7 @@ Start-Process $edgePath -ArgumentList "--load-extension=`"$extDir`"", "https://a
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Green
-Write-Host "  Outlook Reader 已启动！" -ForegroundColor Green
+Write-Host "  Ourlock Reader 已启动！" -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "如果扩展未生效，请：" -ForegroundColor Yellow

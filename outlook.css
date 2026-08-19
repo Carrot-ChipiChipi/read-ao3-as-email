@@ -34,7 +34,7 @@ html:has(> #outlook-app) {
   height: 100vh !important;
   background: var(--bg-panel);
   color: var(--text);
-  font-family: 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-family: 'Segoe UI', 'Noto Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 14px;
   line-height: 1.35;
   overflow: hidden;

@@ -3,7 +3,6 @@
 > 把 AO3（Archive of Our Own）伪装成 Marcohard Ourlock 邮箱界面的浏览器扩展。
 > 打开 AO3 任意页面，看到的是一套完整的邮箱客户端界面——搜索、列表、阅读，一应俱全。
 
-![界面预览](screenshots/extension-ui.png)
 
 ## 这是什么
 
@@ -23,7 +22,7 @@
 
 ### 方式一：手动加载（推荐）
 
-1. 把本项目下载/解压到本地文件夹（例如 `D:\extensions\ao3-outlook-reader-extension`）
+1. 把本项目下载/解压到本地文件夹（例如 `D:\extensions\read-ao3-as-email`）
 2. 打开 Edge 浏览器，地址栏输入 `edge://extensions/`
 3. 打开左下角 **「开发人员模式」** 开关
 4. 点击 **「加载解压缩的扩展」**
@@ -84,7 +83,7 @@ Start-Process "msedge.exe" -ArgumentList "--load-extension=`"$extDir`"", "https:
 
 ### 成人内容（NSFW）确认页
 
-遇到 AO3 的成人内容确认页时，会显示 Outlook 风格的提示卡片：
+遇到 AO3 的成人内容确认页时，会显示 Marcohard Ourlock 风格的提示卡片：
 - **「是，继续」** — 同意查看，本次会话不再询问（AO3 会记住 cookie）
 - **「不，返回」** — 返回上一页
 
@@ -105,11 +104,11 @@ https://archiveofourown.org/works/34500952?view=raw
 ## 项目结构
 
 ```
-ao3-outlook-reader-extension/
+read-ao3-as-email/
 ├── manifest.json          # MV3 扩展配置
 ├── content.js             # 主页面套壳逻辑（三栏布局 + 内容解析）
 ├── login.js               # 登录页套壳
-├── outlook.css            # Outlook 风格样式（全站注入）
+├── outlook.css            # Marcohard Ourlock 风格样式（全站注入）
 ├── bg.jpg                 # 阅读区空态背景（夜空山脉）
 ├── icons/                 # 扩展图标
 ├── screenshots/           # 界面截图
@@ -119,9 +118,9 @@ ao3-outlook-reader-extension/
 ### 工作原理
 
 1. `manifest.json` 声明 content script 匹配 `archiveofourown.org/*`
-2. 页面加载时注入 `outlook.css` + `content.js`，构建全屏 Outlook 覆盖层（`z-index` 最高）
+2. 页面加载时注入 `outlook.css` + `content.js`，构建全屏 Marcohard Ourlock 覆盖层（`z-index` 最高）
 3. 根据 URL 路由：`/` → 收件箱、`/works/search` → 邮件列表、`/works/:id` → 阅读区、`/media` → 分类浏览
-4. 解析当前页面的 AO3 DOM，把数据渲染到 Outlook 对应区域
+4. 解析当前页面的 AO3 DOM，把数据渲染到 Marcohard Ourlock 对应区域
 5. 所有导航通过整页跳转，扩展每页自动重新套壳
 
 ---
