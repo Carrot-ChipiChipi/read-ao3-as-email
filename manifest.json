@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Microsoft Outlook",
-  "description": "Microsoft Outlook - Email Client",
+  "name": "Marcohard Ourlock",
+  "description": "Marcohard Ourlock - Email Client",
   "version": "2.1.0",
   "content_scripts": [
     {

@@ -43,9 +43,9 @@
         <div class="title-bar-left">
           <svg class="outlook-logo" viewBox="0 0 24 24" width="20" height="20">
             <rect x="2" y="4" width="20" height="16" rx="2" fill="#0078d4"/>
-            <text x="12" y="15.5" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold" font-family="Segoe UI,sans-serif">O</text>
+            <text x="12" y="15.5" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold" font-family="Segoe UI,sans-serif">M</text>
           </svg>
-          <span class="app-name">Outlook</span>
+          <span class="app-name">Marcohard Ourlock</span>
         </div>
         <div class="title-bar-center"></div>
         <div class="title-bar-right">
@@ -73,7 +73,7 @@
           <div class="sidebar-footer">
             <a href="https://archiveofourown.org/users/login" target="_blank" class="user-info" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:4px;cursor:pointer;transition:background 0.15s;" id="btn-login">
               <div class="avatar">U</div>
-              <span class="user-name">user@outlook.com</span>
+              <span class="user-name">user@ourlock.com</span>
             </a>
           </div>
         </div>
@@ -797,7 +797,7 @@
     }
 
     // Document title
-    document.title = 'Outlook';
+    document.title = 'Marcohard Ourlock';
 
     bindEvents();
   }
@@ -809,7 +809,7 @@
     try {
       route();
     } catch (e) {
-      console.error('[Outlook]', e);
+      console.error('[Ourlock]', e);
       renderListError('页面解析失败: ' + e.message);
     }
     // Remove cover

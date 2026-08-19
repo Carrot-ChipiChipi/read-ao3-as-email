@@ -162,13 +162,13 @@
         }
       </style>
       <div class="login-header">
-        <div class="logo-icon"><span>O</span></div>
-        <span class="logo-text">Outlook</span>
+        <div class="logo-icon"><span>M</span></div>
+        <span class="logo-text">Marcohard Ourlock</span>
       </div>
       <div class="login-body">
         <div class="login-card">
           <h2>登录</h2>
-          <p class="subtitle">使用你的 Outlook 帐户</p>
+          <p class="subtitle">使用你的 Marcohard Ourlock 帐户</p>
           <form id="outlook-login-form" action="https://archiveofourown.org/users/login" method="post">
             <input type="hidden" name="authenticity_token" id="csrf-token">
             <div class="form-group">
@@ -210,7 +210,7 @@
     const csrfInput = root.querySelector('#csrf-token');
     if (csrfInput) csrfInput.value = csrfToken;
 
-    document.title = 'Outlook - 登录';
+    document.title = 'Marcohard Ourlock - 登录';
 
     if (cover.parentNode) cover.parentNode.removeChild(cover);
   }

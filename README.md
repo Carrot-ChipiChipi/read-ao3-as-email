@@ -1,15 +1,15 @@
-# Outlook Reader — AO3 隐身阅读器
+# Marcohard Ourlock Reader — AO3 隐身阅读器
 
-> 把 AO3（Archive of Our Own）伪装成 Microsoft Outlook 界面的浏览器扩展。
-> 打开 AO3 任意页面，看到的是一套完整的 Outlook 邮件客户端——搜索、列表、阅读，一应俱全。
+> 把 AO3（Archive of Our Own）伪装成 Marcohard Ourlock 邮箱界面的浏览器扩展。
+> 打开 AO3 任意页面，看到的是一套完整的邮箱客户端界面——搜索、列表、阅读，一应俱全。
 
 ![界面预览](screenshots/extension-ui.png)
 
 ## 这是什么
 
-一个 Edge/Chrome 扩展（Manifest V3）。安装后，**访问 archiveofourown.org 的任意页面会自动变成 Outlook 界面**，所有 AO3 功能被"翻译"成邮件功能：
+一个 Edge/Chrome 扩展（Manifest V3）。安装后，**访问 archiveofourown.org 的任意页面会自动变成 Marcohard Ourlock 界面**，所有 AO3 功能被"翻译"成邮件功能：
 
-| Outlook 元素 | 实际功能 |
+| 界面元素 | 实际功能 |
 |---|---|
 | 顶部搜索框 | AO3 作品搜索 |
 | 左侧文件夹 | 收件箱=最新更新 / 已加星标=热门 / 已发送=长文 / 草稿=高点赞 / 收藏夹=分类浏览 |
@@ -33,7 +33,7 @@
 
 ### 方式二：启动脚本
 
-项目内附带了 `启动Outlook Reader.bat` / `启动Outlook Reader.ps1`（Windows）。
+项目内附带了 `启动Ourlock Reader.bat` / `启动Ourlock Reader.ps1`（Windows）。
 双击脚本会自动用 `--load-extension` 参数启动 Edge 并打开 AO3。
 
 ```powershell
@@ -90,7 +90,7 @@ Start-Process "msedge.exe" -ArgumentList "--load-extension=`"$extDir`"", "https:
 
 ### 登录页
 
-点击左下角用户头像（`user@outlook.com`），会打开 AO3 登录页——同样被套壳成 Outlook 风格的登录卡片，表单直接提交到 AO3，登录后 AO3 功能正常使用（点赞、评论、收藏）。
+点击左下角用户头像（`user@ourlock.com`），会打开 AO3 登录页——同样被套壳成 Marcohard Ourlock 风格的登录卡片，表单直接提交到 AO3，登录后 AO3 功能正常使用（点赞、评论、收藏）。
 
 ### 查看原始页面
 
