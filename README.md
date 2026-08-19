@@ -1,12 +1,12 @@
-# Marcohard Ourlock Reader — AO3 隐身阅读器
+# AO3 隐身阅读器（邮箱界面伪装版）
 
-> 把 AO3（Archive of Our Own）伪装成 Marcohard Ourlock 邮箱界面的浏览器扩展。
+> 把 AO3（Archive of Our Own）伪装成邮箱客户端界面的浏览器扩展。
 > 打开 AO3 任意页面，看到的是一套完整的邮箱客户端界面——搜索、列表、阅读，一应俱全。
 
 
 ## 这是什么
 
-一个 Edge/Chrome 扩展（Manifest V3）。安装后，**访问 archiveofourown.org 的任意页面会自动变成 Marcohard Ourlock 界面**，所有 AO3 功能被"翻译"成邮件功能：
+一个 Edge/Chrome 扩展（Manifest V3）。安装后，**访问 archiveofourown.org 的任意页面会自动变成邮箱客户端界面**，所有 AO3 功能被"翻译"成邮件功能：
 
 | 界面元素 | 实际功能 |
 |---|---|
@@ -83,13 +83,13 @@ Start-Process "msedge.exe" -ArgumentList "--load-extension=`"$extDir`"", "https:
 
 ### 成人内容（NSFW）确认页
 
-遇到 AO3 的成人内容确认页时，会显示 Marcohard Ourlock 风格的提示卡片：
+遇到 AO3 的成人内容确认页时，会显示邮箱客户端风格的提示卡片：
 - **「是，继续」** — 同意查看，本次会话不再询问（AO3 会记住 cookie）
 - **「不，返回」** — 返回上一页
 
 ### 登录页
 
-点击左下角用户头像（`user@ourlock.com`），会打开 AO3 登录页——同样被套壳成 Marcohard Ourlock 风格的登录卡片，表单直接提交到 AO3，登录后 AO3 功能正常使用（点赞、评论、收藏）。
+点击左下角用户头像（`user@ourlock.com`），会打开 AO3 登录页——同样被套壳成邮箱风格的登录卡片，表单直接提交到 AO3，登录后 AO3 功能正常使用（点赞、评论、收藏）。
 
 ### 查看原始页面
 
@@ -108,7 +108,7 @@ read-ao3-as-email/
 ├── manifest.json          # MV3 扩展配置
 ├── content.js             # 主页面套壳逻辑（三栏布局 + 内容解析）
 ├── login.js               # 登录页套壳
-├── outlook.css            # Marcohard Ourlock 风格样式（全站注入）
+├── outlook.css            # 邮箱客户端风格样式（全站注入）
 ├── bg.jpg                 # 阅读区空态背景（夜空山脉）
 ├── icons/                 # 扩展图标
 ├── screenshots/           # 界面截图
@@ -118,9 +118,9 @@ read-ao3-as-email/
 ### 工作原理
 
 1. `manifest.json` 声明 content script 匹配 `archiveofourown.org/*`
-2. 页面加载时注入 `outlook.css` + `content.js`，构建全屏 Marcohard Ourlock 覆盖层（`z-index` 最高）
+2. 页面加载时注入 `outlook.css` + `content.js`，构建全屏邮箱客户端覆盖层（`z-index` 最高）
 3. 根据 URL 路由：`/` → 收件箱、`/works/search` → 邮件列表、`/works/:id` → 阅读区、`/media` → 分类浏览
-4. 解析当前页面的 AO3 DOM，把数据渲染到 Marcohard Ourlock 对应区域
+4. 解析当前页面的 AO3 DOM，把数据渲染到邮箱界面对应区域
 5. 所有导航通过整页跳转，扩展每页自动重新套壳
 
 ---
